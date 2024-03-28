@@ -105,8 +105,6 @@
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
-				
-				unityInstance.SendMessage('Global Scene Loader', 'LoadScenario', 'AB Lat From JS');
 
               }).catch((message) => {
                 alert(message);
