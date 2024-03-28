@@ -52,12 +52,12 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/test3.loader.js";
+      var loaderUrl = buildUrl + "/xray-simulation-pages.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/test3.data",
-        frameworkUrl: buildUrl + "/test3.framework.js",
-        codeUrl: buildUrl + "/test3.wasm",
+        dataUrl: buildUrl + "/xray-simulation-pages.data",
+        frameworkUrl: buildUrl + "/xray-simulation-pages.framework.js",
+        codeUrl: buildUrl + "/xray-simulation-pages.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "X-Ray Simulation",
@@ -105,6 +105,8 @@
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
+				
+				unityInstance.SendMessage('Global Scene Loader', 'LoadScenario', 'AB Lat From JS');
 
               }).catch((message) => {
                 alert(message);
